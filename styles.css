@@ -1,0 +1,188 @@
+:root {
+  --bg: #050505;
+  --panel: rgba(255, 255, 255, 0.05);
+  --panel-strong: rgba(255, 255, 255, 0.08);
+  --text: #f4f4f2;
+  --muted: rgba(244, 244, 242, 0.6);
+  --accent: #ffffff;
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  color: var(--text);
+  background-color: var(--bg);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.04), transparent 45%),
+    radial-gradient(circle at 85% 0%, rgba(255, 255, 255, 0.03), transparent 40%),
+    var(--bg);
+}
+
+a {
+  color: inherit;
+}
+
+.page-shell {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem clamp(1rem, 3vw, 3rem) 3rem;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+}
+
+.brand {
+  font-weight: 500;
+  letter-spacing: 0.8em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--muted);
+  transition: color 0.2s ease;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  color: var(--text);
+}
+
+.hero {
+  margin-top: 2rem;
+  padding-bottom: 1.5rem;
+  max-width: 720px;
+  margin-bottom: 2rem;
+}
+
+.overline {
+  font-size: 0.65rem;
+  letter-spacing: 0.8em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.hero h1 {
+  font-family: "Playfair Display", "Space Grotesk", serif;
+  font-size: clamp(2.2rem, 2.8vw, 2.8rem);
+  margin: 0 0 0.2rem;
+}
+
+.lede {
+  color: var(--muted);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.status {
+  margin: 1.2rem 0 0;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+
+.hero-links {
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-links a {
+  text-decoration: none;
+  color: var(--muted);
+  letter-spacing: 0.35em;
+}
+
+.hero-links a strong {
+  font-weight: 700;
+}
+
+.simple-page {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  max-width: 620px;
+}
+
+.bold-link {
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.project-highlight {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.proj-name {
+  font-size: 1.2rem;
+  letter-spacing: 0.25em;
+  text-transform: lowercase;
+  font-weight: 700;
+  margin: 0;
+}
+
+.proj-tldr {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.about-minimal p {
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.6;
+}
+
+
+.page-footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+
+.footnote {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+@media (max-width: 700px) {
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .page-footer {
+    flex-direction: column;
+  }
+}
